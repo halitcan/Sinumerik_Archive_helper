@@ -8,6 +8,7 @@ class Loader :public QThread
 public:
     explicit Loader(QObject* parent, const QString& filename);
     void run();
+    void load_archive();
 
 signals:
     void loaded_file();
