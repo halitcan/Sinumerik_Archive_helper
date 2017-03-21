@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "misc/loader.h"
+#include "ladebalken.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +28,7 @@ signals:
 private:
     Ui::MainWindow *ui;
     bool file_loaded;
+    Ladebalken* ladebalken_dialog;
 };
 
 #endif // MAINWINDOW_H

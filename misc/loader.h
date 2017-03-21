@@ -10,6 +10,9 @@ public:
     void run();
     void load_archive();
 
+
+public slots:
+    void abgebrochen();
 signals:
     void loaded_file();
 

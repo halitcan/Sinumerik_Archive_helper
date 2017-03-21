@@ -1,11 +1,12 @@
 #include "loader.h"
 #include <QFile>
 #include <QDebug>
+#include <QDataStream>
 
 Loader::Loader(QObject* parent, const QString& filename)
     :QThread(parent), filename(filename)
 {
-    //emit loaded_file(true);
+
 }
 
 void Loader::run()
@@ -18,10 +19,17 @@ void Loader::run()
 void Loader::load_archive()
 {
     QFile file(filename);
-    QDataStream data(&file);
-    file.read(0);
+    file.open(QIODevice::ReadOnly);
 
-    QString currentString;
-    data >> currentString;
-    qDebug() << currentString;
+    while(!file.atEnd())
+    {
+        QString currentLine = file.readLine();
+    }
+
+}
+
+void Loader::abgebrochen()
+{
+    this->terminate();
+    this->exit();
 }

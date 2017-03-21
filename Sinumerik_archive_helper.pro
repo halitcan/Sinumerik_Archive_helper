@@ -15,21 +15,25 @@ TEMPLATE = app
 SOURCES += \
         program/main.cpp\
         dialoge/mainwindow.cpp \
+        dialoge/ladebalken.cpp \
         maschinendaten/maschinendatum.cpp \
         maschinendaten/allgemeinmaschinendaten.cpp \
         maschinendaten/kanalmaschinendaten.cpp \
         maschinendaten/achsmaschinendaten.cpp \
-        misc/loader.cpp
+        misc/loader.cpp \
 
 HEADERS  += \
     dialoge/mainwindow.h \
+    dialoge/ladebalken.h \
     maschinendaten/maschinendatum.h \
     maschinendaten/allgemeinmaschinendaten.h \
     maschinendaten/kanalmaschinendaten.h \
     maschinendaten/achsmaschinendaten.h \
-    misc/loader.h
+    misc/loader.h \
+
 
 FORMS    += \
-    ui/mainwindow.ui
+    ui/mainwindow.ui \
+    ui/ladebalken.ui \
 
 CONFIG += c++11
